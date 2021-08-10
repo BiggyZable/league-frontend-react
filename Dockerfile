@@ -2,7 +2,7 @@ FROM node:latest
 
 WORKDIR /app
 
-COPY /app/package_lock.json ./
+COPY /app/package-lock.json ./
 
 RUN npm ci
 
