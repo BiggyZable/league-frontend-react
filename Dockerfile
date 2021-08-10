@@ -1,11 +1,9 @@
 FROM node:latest
 
-WORKDIR /app
-
-COPY /app/package-lock.json ./
-
-RUN npm ci
+WORKDIR /
 
 COPY /app .
+
+RUN npm install
 
 CMD ["npm" , "start"]
