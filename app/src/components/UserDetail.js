@@ -38,8 +38,9 @@ const UserDetail = (props) => {
   }, [user]);
 
   const fetchChampions = async () => {
-    const res = await fetch(`${API_BASE_URL}/champions`);
+    const res = await fetch(`${API_BASE_URL}/champions/userdata`);
     const data = await res.json();
+    console.log(data.data);
     return data.data;
   };
 
